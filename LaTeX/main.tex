@@ -1,0 +1,169 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, appendix, bm, fancyhdr, graphicx, geometry, mathrsfs, zhnumber}
+\usepackage{listings}
+\usepackage[bookmarks=true, colorlinks, citecolor=black, linkcolor=black]{hyperref}
+
+\linespread{1.2}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm} 
+
+\renewcommand{\thesection}{\zhnum{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\graphicspath{{./graphics/}}
+
+\begin{document}
+
+\pagestyle{empty}
+\setcounter{page}{0}
+
+\begin{center}
+    \Large{\textbf{\LaTeX 建模论文模板3.0}}
+\end{center}
+
+\begin{center}
+    \Large{\textbf{摘要}}
+\end{center}
+
+这里是摘要。
+
+\textbf{关键词：}这里是关键词；这里是关键词。
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\pagestyle{plain}
+\fancyfoot[C]{\thepage}
+
+\section{问题背景与重述}
+
+\subsection{问题背景}
+
+编写该模板是为了应对接下来所面对的一切中文数学建模竞赛。
+
+众所周知，Word的公式排版奇丑无比，并且小节和公式的编号较为麻烦。
+相比之下，我更喜欢\LaTeX 干净简洁的风格。
+为了彻底摆脱Word，特地编写了该模板，用于接下来的各种竞赛。
+
+\subsection{问题重述}
+
+我们所需要解决的问题如下。
+\begin{itemize}
+    \item 制作出一个适用于中文建模竞赛的\LaTeX 模板；
+    \item 在模板中，应当能够使用表格、图片、公式等对象。
+\end{itemize}
+
+\section{问题分析}
+
+\subsection{问题1的分析}
+
+在这里写问题1的分析。
+
+\subsection{问题2的分析}
+
+在这里写问题2的分析。
+
+\section{模型准备}
+
+\subsection{模型假设}
+
+为了建立模型，我们提出如下的假设。
+
+\begin{enumerate}
+    \item 这里是第一条假设。
+    \\\textbf{理由：}这里是作出第一条假设的理由。
+    \item 这里是第二条假设。
+    \\\textbf{理由：}这里是作出第二条假设的理由。
+    \item 这里是第三条假设。
+    \\\textbf{理由：}这里是作出第三条假设的理由。
+    \item 这里是第四条假设。
+    \\\textbf{理由：}这里是作出第四条假设的理由。
+\end{enumerate}
+
+\subsection{符号说明}
+
+所使用的符号及说明如表\ref{table1}所示。
+
+\begin{table}[h]
+    \caption{符号说明}\label{table1}
+    \centering
+    \begin{tabular}{clc}
+        \hline
+        \textbf{符号} & \textbf{说明}        & \textbf{单位}   \\ \hline
+        符号1         & 这里是符号1的说明。  & 单位             \\
+        符号2         & 这里是符号2的说明。  & 单位             \\
+        符号3         & 这里是符号3的说明。  & 单位             \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{模型的建立与求解}
+
+\subsection{模型1}
+
+针对问题1，建立了模型1。
+
+其中，公式的书写方式如下。
+\begin{equation}
+    \label{eq1}
+    {\rm{e}}^{i\theta}=\cos\theta+i\sin\theta.
+\end{equation}
+公式\ref{eq1}就是大名鼎鼎的Euler公式。
+
+\subsection{模型2}
+
+针对问题2，建立了模型2。
+
+在论文中可能需要插入图片，在这里插入图片的方式如下。
+
+\section{结果的分析与检验}
+
+\subsection{问题的结果}
+
+在这里写问题的结果。
+
+\subsection{模型的检验}
+
+在这里写对模型的检验。
+
+\section{模型的优缺点分析}
+
+\subsection{模型的优点}
+
+该模型具有如下的优点。
+\begin{itemize}
+    \item 优点1；
+    \item 优点2；
+    \item 优点3。
+\end{itemize}
+
+\subsection{模型的缺点与改进}
+
+与此同时，该模型也具有如下的缺点。
+\begin{itemize}
+    \item 缺点1；
+    \item 缺点2。
+\end{itemize}
+同时，在这里给出进一步优化模型的思路。
+
+\begin{thebibliography}{99}
+    \bibitem{a}作者. \emph{文献}[M]. 地点:出版社,年份.
+    \bibitem{b}作者. \emph{文献}[M]. 地点:出版社,年份.
+\end{thebibliography}
+
+\begin{center}
+    \Large{\textbf{附录}}
+\end{center}
+
+\begin{appendices}
+    \renewcommand{\thesection}{\Alph{section}}
+    \section{所用软件}
+        论文使用\LaTeX 排版。
+    \section{代码}
+        所使用的代码如下。
+	\begin{lstlisting}
+		Hello. 
+	\end{lstlisting}
+\end{appendices}
+
+\end{document}
