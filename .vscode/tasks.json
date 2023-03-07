@@ -25,4 +25,145 @@
         }
     ],
     "version": "2.0.0"
+
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+
+    // 取消 LaTex 保存时自动编译
+    //"latex-workshop.latex.autoBuild.run": "never",
+    // 去掉编译出错时的气泡
+    // "latex-workshop.message.error.show": false,
+    // "latex-workshop.message.warning.show": false,
+
+    "latex-workshop.latex.tools": [
+        {
+            // 编译工具和命令
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    // 用于配置编译链
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ],
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdf->bib->pdf->pdf",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    // 使用 SumatraPDF 预览编译好的PDF文件
+    "latex-workshop.view.pdf.external.viewer.command": "E:/SumatraPDF/SumatraPDF.exe",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "-forward-search",
+        "%TEX%",
+        "%LINE%",
+        "-reuse-instance",
+        "-inverse-search",
+        "\"E:/Microsoft VS Code/Code.exe\" \"E:/Microsoft VS Code/resources/app/out/cli.js\" -gr \"%f\":\"%l\"",
+        "%PDF%"
+    ],
+    // 配置正向和反向搜索
+    "latex-workshop.view.pdf.external.synctex.command": "E:/SumatraPDF/SumatraPDF.exe",
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "-forward-search",
+        "%TEX%",
+        "%LINE%",
+        "-reuse-instance",
+        "-inverse-search",
+        "\"E:/Microsoft VS Code/Code.exe\" \"E:/Microsoft VS Code/resources/app/out/cli.js\" -gr \"%f\":\"%l\"",
+        "%PDF%",
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+    ],
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "latex-workshop.view.pdf.viewer": "tab",
+
+
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 15,
+    "editor.cursorBlinking": "smooth",
+    "editor.smoothScrolling": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.fontFamily": "Jetbrains mono, '微软雅黑', monospace",
+    "editor.wordWrap": "on",
+    "wolframLanguageNotebook.kernel.configurations": {
+        "wolframscript": {
+            "type": "local",
+            "command": "wolframscript",
+            "ports": "49152-65535"
+        }
+    },
+    "liveshare.presence": true
 }
