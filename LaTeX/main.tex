@@ -2,6 +2,10 @@
 \usepackage{amsmath, amsthm, amssymb, appendix, bm, fancyhdr, graphicx, geometry, mathrsfs, zhnumber}
 \usepackage{listings}
 \usepackage[bookmarks=true, colorlinks, citecolor=black, linkcolor=black]{hyperref}
+\usepackage{tabularray}
+\usepackage{subfigure}
+\usepackage{graphicx}
+
 
 \linespread{1.2}
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm} 
@@ -19,7 +23,7 @@
 \setcounter{page}{0}
 
 \begin{center}
-    \Large{\textbf{\LaTeX建模论文模板3.0}}
+    \Large{\textbf{建模论文模板3.0}}
 \end{center}
 
 \begin{center}
@@ -42,15 +46,15 @@
 
 编写该模板是为了应对接下来所面对的一切中文数学建模竞赛。
 
-众所周知，Word的公式排版奇丑无比，并且小节和公式的编号较为麻烦。
-相比之下，我更喜欢\LaTeX干净简洁的风格。
-为了彻底摆脱Word，特地编写了该模板，用于接下来的各种竞赛。
+% 众所周知，Word的公式排版奇丑无比，并且小节和公式的编号较为麻烦。
+% 相比之下，我更喜欢\LaTeX干净简洁的风格。
+% 为了彻底摆脱Word，特地编写了该模板，用于接下来的各种竞赛。
 
 \subsection{问题重述}
 
 我们所需要解决的问题如下。
 \begin{itemize}
-    \item 制作出一个适用于中文建模竞赛的\LaTeX 模板；
+    % \item 制作出一个适用于中文建模竞赛的\LaTeX模板；
     \item 在模板中，应当能够使用表格、图片、公式等对象。
 \end{itemize}
 
@@ -85,10 +89,10 @@
 
 所使用的符号及说明如表\ref{table1}所示。
 
-\begin{table}[h]
+\begin{table}[ht]
     \caption{符号说明}\label{table1}
     \centering
-    \begin{tabular}{clc}
+    \begin{tabular}{c l c}
         \hline
         \textbf{符号} & \textbf{说明}        & \textbf{单位}   \\ \hline
         符号1         & 这里是符号1的说明。  & 单位             \\
@@ -106,7 +110,7 @@
 其中，公式的书写方式如下。
 \begin{equation}
     \label{eq1}
-    {\rm{e}}^{i\theta}=\cos\theta+i\sin\theta.
+    {\textrm{^}{e}}{i\theta}=\cos\theta+i\sin\theta.
 \end{equation}
 公式\ref{eq1}就是大名鼎鼎的Euler公式。
 
